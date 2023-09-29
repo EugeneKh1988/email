@@ -70,7 +70,10 @@ const promoEmail = ({
 
   return (
     <Html>
-      <Head />
+      <Head>
+        <meta name="color-scheme" content="light"></meta>
+        <meta name="supported-color-schemes" content="light"></meta>
+      </Head>
       <Preview>{previewText}</Preview>
       <Font
         webFont={{
@@ -274,7 +277,8 @@ const promoEmail = ({
             </Section>
             <Section className="mt-[25px]">
               <Row>
-                <Column align="right">
+                <Column className="w-1/3"></Column>
+                <Column align="center" className="w-1/3">
                   <Img
                     src={
                       isRemoteImages
@@ -285,7 +289,10 @@ const promoEmail = ({
                     height="auto"
                     alt="Кібернетики.UA"
                   />
-                  <p style={{ marginTop: "20px" }} className="text-center max-w-[160px]">
+                  <p
+                    style={{ marginTop: "20px" }}
+                    className="text-center max-w-[160px]"
+                  >
                     <Link href="https://www.instagram.com">
                       <Img
                         src={
@@ -353,7 +360,7 @@ const promoEmail = ({
                     </Link>
                   </p>
                 </Column>
-                <Column>
+                <Column className="w-1/3">
                   <Img
                     src={
                       isRemoteImages
