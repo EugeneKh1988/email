@@ -114,7 +114,7 @@ const promoEmail = ({
               <Row>
                 <Column>
                   <Text
-                    className="text-[24px] mx-[15px] my-[20px] font-[700] gilroy"
+                    className="text-[24px] mx-[15px] my-[20px] font-[700]"
                     style={{
                       color: "#2B2A29",
                       fontFamily: `Gilroy-Bold, ${fallBackFonts}`,
@@ -159,7 +159,7 @@ const promoEmail = ({
                       fontFamily: `Lato-Bold, ${fallBackFonts}`,
                     }}
                   >
-                    {productOldPrice}
+                    {productOldPrice.toLocaleString()}
                     <span>&#8372;</span>
                   </Text>
                   <Text
@@ -169,7 +169,7 @@ const promoEmail = ({
                       fontFamily: `Lato-Bold, ${fallBackFonts}`,
                     }}
                   >
-                    {productPrice}
+                    {productPrice.toLocaleString()}
                     <span>&#8372;</span>
                   </Text>
                   <Button
@@ -285,7 +285,7 @@ const promoEmail = ({
                     height="auto"
                     alt="Кібернетики.UA"
                   />
-                  <p style={{ marginTop: "20px" }}>
+                  <p style={{ marginTop: "20px" }} className="text-center max-w-[160px]">
                     <Link href="https://www.instagram.com">
                       <Img
                         src={
@@ -347,7 +347,7 @@ const promoEmail = ({
                         }
                         width={16}
                         height="auto"
-                        className="inline-block mr-6"
+                        className="inline-block"
                         alt="Telegram"
                       />
                     </Link>
