@@ -72,7 +72,7 @@ const promoEmail = ({
     <Html>
       <Head>
         <meta name="color-scheme" content="light"></meta>
-        <meta name="supported-color-schemes" content="light"></meta>
+        <meta name="supported-color-schemes" content="light dark"></meta>
       </Head>
       <Preview>{previewText}</Preview>
       <Font
@@ -98,7 +98,7 @@ const promoEmail = ({
       <Tailwind>
         <Body className="bg-white mx-auto my-auto font-sans">
           <Container
-            className="mx-auto py-[20px] w-full"
+            className="mx-auto w-full"
             style={{
               background: isRemoteImages
                 ? "url(https://drive.google.com/uc?export=view&id=1d3CO3W71eKjorIUspDIsg2O8t1LbFoi0), url(https://drive.google.com/uc?export=view&id=1cpzGm02olFv_J-KQeO1FakBiZ_Sm4D8y) #ffffff"
@@ -117,7 +117,7 @@ const promoEmail = ({
               <Row>
                 <Column>
                   <Text
-                    className="text-[24px] mx-[15px] my-[20px] font-[700]"
+                    className="text-[24px] mx-[15px] my-[20px] font-[700] text-2B2A29"
                     style={{
                       color: "#2B2A29",
                       fontFamily: `Gilroy-Bold, ${fallBackFonts}`,
@@ -181,6 +181,7 @@ const promoEmail = ({
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
+                      border: "2px solid #ffffff",
                       fontFamily: `Lato-Bold, ${fallBackFonts}`,
                     }}
                   >
@@ -204,17 +205,18 @@ const promoEmail = ({
             </Text>
             <Section>
               <Row>
-                <Column>
+                <Column align="center">
                   <Link href="#">
                     <Img
                       src={
                         isRemoteImages
-                          ? "https://drive.google.com/uc?export=view&id=1cnkztDEUGb6lY7WI_wrgwUYwZY_ZW-ri"
-                          : `${baseUrl}/static/cashback.png`
+                          ? "https://drive.google.com/uc?export=view&id=1eFkPyWJEKSAqVnjt0Fg7I0gPCn2NSnjw"
+                          : `${baseUrl}/static/cashback_.png`
                       }
-                      width={200}
+                      width={180}
                       height="auto"
                       alt="Кібер-Кешбек"
+                      className="px-[10px]"
                     />
                     <Text
                       className="text-center text-[20px] font-[700]"
@@ -227,17 +229,18 @@ const promoEmail = ({
                     </Text>
                   </Link>
                 </Column>
-                <Column>
+                <Column align="center">
                   <Link href="#">
                     <Img
                       src={
                         isRemoteImages
-                          ? "https://drive.google.com/uc?export=view&id=1dAXVeiLTgrZQW3xbRoGDFrFVb04Kiivn"
-                          : `${baseUrl}/static/credit.png`
+                          ? "https://drive.google.com/uc?export=view&id=1eIqSCRZkhWXzRTYokZb7nXDJQ9HXMuh0"
+                          : `${baseUrl}/static/credit_.png`
                       }
-                      width={200}
+                      width={180}
                       height="auto"
                       alt="Кібер-Кредит"
+                      className="px-[10px]"
                     />
                     <Text
                       className="text-center text-[20px] font-[700]"
@@ -250,17 +253,18 @@ const promoEmail = ({
                     </Text>
                   </Link>
                 </Column>
-                <Column>
+                <Column align="center">
                   <Link href="#">
                     <Img
                       src={
                         isRemoteImages
-                          ? "https://drive.google.com/uc?export=view&id=1cpxJQm_0Yeo3-wtLs14JWlcYCJxPcwSf"
-                          : `${baseUrl}/static/exchange.png`
+                          ? "https://drive.google.com/uc?export=view&id=1eL9R4C4N5l7R9kDSKoz4hxaOk2j3RJpb"
+                          : `${baseUrl}/static/exchange_.png`
                       }
-                      width={200}
+                      width={180}
                       height="auto"
                       alt="Кібер-Обмін"
+                      className="px-[10px]"
                     />
                     <Text
                       className="text-center text-[20px] font-[700]"
@@ -288,6 +292,10 @@ const promoEmail = ({
                     width={160}
                     height="auto"
                     alt="Кібернетики.UA"
+                    style={{
+                      border: "2px solid #ffffff",
+                      borderRadius: "20px",
+                    }}
                   />
                   <p
                     style={{ marginTop: "20px" }}
