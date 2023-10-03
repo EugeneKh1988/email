@@ -305,7 +305,7 @@ const promoEmail = ({
                       <Img
                         src={
                           isRemoteImages
-                            ? "https://drive.google.com/uc?export=view&id=1dhF23rML6nEnRJ3-n86pLngOhwSgSM7W"
+                            ? "https://drive.google.com/uc?export=view&id=1eLdcIRonuTdOdZ1juYjiRIQ-PT9pntx6"
                             : `${baseUrl}/static/instagram.png`
                         }
                         width={16}
@@ -318,7 +318,7 @@ const promoEmail = ({
                       <Img
                         src={
                           isRemoteImages
-                            ? "https://drive.google.com/uc?export=view&id=1dTmzHy0NCvAmaWwF0bHDtoCw44F5hmB7"
+                            ? "https://drive.google.com/uc?export=view&id=1eZeuERqjqdiomQL1rPhUL8a3ylTUeiEO"
                             : `${baseUrl}/static/tik tok.png`
                         }
                         width={16}
@@ -331,7 +331,7 @@ const promoEmail = ({
                       <Img
                         src={
                           isRemoteImages
-                            ? "https://drive.google.com/uc?export=view&id=1dn5XKgH6cX8HFGNSBjz4zssF77WK9ppy"
+                            ? "https://drive.google.com/uc?export=view&id=1eTlU8EWQZX4EfeQKV1oDr9diIMNQHSHk"
                             : `${baseUrl}/static/facebook.png`
                         }
                         width={16}
@@ -344,7 +344,7 @@ const promoEmail = ({
                       <Img
                         src={
                           isRemoteImages
-                            ? "https://drive.google.com/uc?export=view&id=1dXMmxkY_ClyRMtqYmDwCxDZc1W7JrA-0"
+                            ? "https://drive.google.com/uc?export=view&id=1eYptWKagjrFkmpCedfrrs7N-59KvRQ9L"
                             : `${baseUrl}/static/viber.png`
                         }
                         width={16}
@@ -357,7 +357,7 @@ const promoEmail = ({
                       <Img
                         src={
                           isRemoteImages
-                            ? "https://drive.google.com/uc?export=view&id=1df4CMHIgoOZ4q-6qrufierExKKyXb6GX"
+                            ? "https://drive.google.com/uc?export=view&id=1eYsdI6suj30PJ7Yorl2sbi0Cy6RIZS9E"
                             : `${baseUrl}/static/telegram.png`
                         }
                         width={16}
