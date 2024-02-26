@@ -17,10 +17,10 @@ import { Html } from "@react-email/html";
 import * as React from "react";
 
 interface Iproduct {
-    name: string;
-    imgUrl: string;
-    remoteUrl:string,
-};
+  name: string;
+  imgUrl: string;
+  remoteUrl: string;
+}
 
 interface hotlineEmailProps {
   title?: string;
@@ -257,23 +257,22 @@ const hotlineEmail = ({
               </Row>
             </Section>
             <Section>
-              <Row>
-                <Column className="w-[20%] text-right">
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? products[0].remoteUrl
-                        : products[0].imgUrl
-                    }
-                    height="auto"
-                    className="max-w-[120px] inline-block"
-                    alt={products[0].name}
-                  />
-                </Column>
-                <Column className="w-[30%] text-left" valign="top">
+              <Row className="mt-[15px]">
+                <Column
+                  className="w-1/2 text-center h-[120px]"
+                  valign="top"
+                  style={{
+                    background: isRemoteImages
+                      ? `url(${products[0].remoteUrl})`
+                      : `url(${products[0].imgUrl})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "0% 0%",
+                  }}
+                >
                   <Button
-                    className="m-0 pl-[10px] pr-[10px] py-[8px] rounded-[16px] text-[10px] font-[700]"
                     href=""
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700]"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -284,9 +283,21 @@ const hotlineEmail = ({
                     {products[0].name}
                   </Button>
                 </Column>
-                <Column className="w-[30%] text-right">
+                <Column
+                  className="w-1/2 text-center h-[120px]"
+                  valign="bottom"
+                  style={{
+                    background: isRemoteImages
+                      ? `url(${products[1].remoteUrl})`
+                      : `url(${products[1].imgUrl})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "100% 0%",
+                  }}
+                >
                   <Button
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700] inline-block"
+                    href=""
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700] inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -297,36 +308,23 @@ const hotlineEmail = ({
                     {products[1].name}
                   </Button>
                 </Column>
-                <Column className="w-[20%] text-left">
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? products[1].remoteUrl
-                        : products[1].imgUrl
-                    }
-                    height="auto"
-                    className="max-w-[120px] inline-block"
-                    alt={products[1].name}
-                  />
-                </Column>
               </Row>
-              <Row className="mt-10px">
-                <Column className="w-[20%] text-right">
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? products[2].remoteUrl
-                        : products[2].imgUrl
-                    }
-                    height="auto"
-                    className="max-w-[120px] inline-block"
-                    alt={products[2].name}
-                  />
-                </Column>
-                <Column className="w-[30%] text-left" valign="top">
+              <Row className="mt-[15px]">
+                <Column
+                  className="w-1/2 text-center h-[100px]"
+                  valign="top"
+                  style={{
+                    background: isRemoteImages
+                      ? `url(${products[2].remoteUrl})`
+                      : `url(${products[2].imgUrl})`,
+                    backgroundSize: "120px 72px",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "0% 20%",
+                  }}
+                >
                   <Button
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700]"
                     href=""
+                    className="m-0 pl-[10px] pr-[10px] py-[8px] rounded-[16px] text-[12px] font-[700]"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -337,9 +335,21 @@ const hotlineEmail = ({
                     {products[2].name}
                   </Button>
                 </Column>
-                <Column className="w-[30%] text-right">
+                <Column
+                  className="w-1/2 text-center h-[120px]"
+                  valign="bottom"
+                  style={{
+                    background: isRemoteImages
+                      ? `url(${products[3].remoteUrl})`
+                      : `url(${products[3].imgUrl})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "100% 0%",
+                  }}
+                >
                   <Button
-                    className="m-0 pr-[10px] pl-[10px] py-[8px] rounded-[16px] text-[10px] font-[700] inline-block"
+                    href=""
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700] inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -350,36 +360,23 @@ const hotlineEmail = ({
                     {products[3].name}
                   </Button>
                 </Column>
-                <Column className="w-[20%] text-left">
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? products[3].remoteUrl
-                        : products[3].imgUrl
-                    }
-                    height="auto"
-                    className="max-w-[120px] inline-block"
-                    alt={products[3].name}
-                  />
-                </Column>
               </Row>
-              <Row className="mt-10px">
-                <Column className="w-[20%] text-right">
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? products[4].remoteUrl
-                        : products[4].imgUrl
-                    }
-                    height="auto"
-                    className="max-w-[120px] inline-block"
-                    alt={products[4].name}
-                  />
-                </Column>
-                <Column className="w-[30%] text-left" valign="top">
+              <Row className="mt-[15px]">
+                <Column
+                  className="w-1/2 text-center h-[120px]"
+                  valign="top"
+                  style={{
+                    background: isRemoteImages
+                      ? `url(${products[4].remoteUrl})`
+                      : `url(${products[4].imgUrl})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "0% 0%",
+                  }}
+                >
                   <Button
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700]"
                     href=""
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700]"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -390,9 +387,21 @@ const hotlineEmail = ({
                     {products[4].name}
                   </Button>
                 </Column>
-                <Column className="w-[30%] text-right">
+                <Column
+                  className="w-1/2 text-center h-[120px]"
+                  valign="bottom"
+                  style={{
+                    background: isRemoteImages
+                      ? `url(${products[5].remoteUrl})`
+                      : `url(${products[5].imgUrl})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "100% 0%",
+                  }}
+                >
                   <Button
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700] inline-block"
+                    href=""
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700] inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -403,36 +412,23 @@ const hotlineEmail = ({
                     {products[5].name}
                   </Button>
                 </Column>
-                <Column className="w-[20%] text-left">
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? products[5].remoteUrl
-                        : products[5].imgUrl
-                    }
-                    height="auto"
-                    className="max-w-[120px] inline-block"
-                    alt={products[5].name}
-                  />
-                </Column>
               </Row>
-              <Row className="mt-10px">
-                <Column className="w-[20%] text-right">
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? products[6].remoteUrl
-                        : products[6].imgUrl
-                    }
-                    height="auto"
-                    className="max-w-[120px] inline-block"
-                    alt={products[6].name}
-                  />
-                </Column>
-                <Column className="w-[30%] text-left" valign="top">
+              <Row className="mt-[15px]">
+                <Column
+                  className="w-1/2 text-center h-[120px]"
+                  valign="top"
+                  style={{
+                    background: isRemoteImages
+                      ? `url(${products[6].remoteUrl})`
+                      : `url(${products[6].imgUrl})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "0% 0%",
+                  }}
+                >
                   <Button
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700]"
                     href=""
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700]"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -443,9 +439,21 @@ const hotlineEmail = ({
                     {products[6].name}
                   </Button>
                 </Column>
-                <Column className="w-[30%] text-right">
+                <Column
+                  className="w-1/2 text-center h-[120px]"
+                  valign="bottom"
+                  style={{
+                    background: isRemoteImages
+                      ? `url(${products[7].remoteUrl})`
+                      : `url(${products[7].imgUrl})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "100% 0%",
+                  }}
+                >
                   <Button
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700] inline-block"
+                    href=""
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700] inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -455,18 +463,6 @@ const hotlineEmail = ({
                   >
                     {products[7].name}
                   </Button>
-                </Column>
-                <Column className="w-[20%] text-left">
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? products[7].remoteUrl
-                        : products[7].imgUrl
-                    }
-                    height="auto"
-                    className="max-w-[120px] inline-block"
-                    alt={products[7].name}
-                  />
                 </Column>
               </Row>
               <Row>
