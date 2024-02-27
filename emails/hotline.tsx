@@ -33,7 +33,7 @@ interface hotlineEmailProps {
 }
 
 const baseUrl = process.env.SITE_URL ? `https://${process.env.SITE_URL}` : "";
-const isRemoteImages = true;
+const isRemoteImages = false;
 
 const products_: Iproduct[] = [
   {
@@ -125,7 +125,7 @@ const hotlineEmail = ({
   promoCode = "kiber5",
   promoDuration = "Промокод діє з 29 лютого по 7 березня на сайті kibernetiki.com.ua",
   promoHowToL1 = "Вкажіть промокод при оформленні замовлення",
-  promoHowToL2 = "або менеджеру в телефонній розмові 0 800 33 26 96",
+  promoHowToL2 = "або менеджеру в телефонній розмові ",
   products = products_,
 }: hotlineEmailProps) => {
   return (
@@ -251,6 +251,7 @@ const hotlineEmail = ({
                     }}
                   >
                     {promoHowToL2}
+                    <span className="font-[700]">0 800 33 26 96</span>
                   </Text>
                   <Hr style={{ borderTop: "2px solid #9E9E9E" }} />
                 </Column>

@@ -33,7 +33,7 @@ interface hotlineEmailProps {
 }
 
 const baseUrl = process.env.SITE_URL ? `https://${process.env.SITE_URL}` : "";
-const isRemoteImages = true;
+const isRemoteImages = false;
 
 const products_: Iproduct[] = [
   {
@@ -125,7 +125,7 @@ const hotlineEmail = ({
   promoCode = "kiber5",
   promoDuration = "Промокод діє з 29 лютого по 7 березня на сайті kibernetiki.com.ua",
   promoHowToL1 = "Вкажіть промокод при оформленні замовлення",
-  promoHowToL2 = "або менеджеру в телефонній розмові 0 800 33 26 96",
+  promoHowToL2 = "або менеджеру в телефонній розмові ",
   products = products_,
 }: hotlineEmailProps) => {
   return (
@@ -157,7 +157,7 @@ const hotlineEmail = ({
       />
       <Tailwind>
         <Body className="bg-white mx-auto my-auto font-sans">
-          <Container className="mx-auto w-full">
+          <Container className="mx-auto w-full max-w-[38.75em]">
             <Section
               style={{
                 backgroundColor: "#FDDC37",
@@ -251,12 +251,13 @@ const hotlineEmail = ({
                     }}
                   >
                     {promoHowToL2}
+                    <span className="font-[700]">0 800 33 26 96</span>
                   </Text>
                   <Hr style={{ borderTop: "2px solid #9E9E9E" }} />
                 </Column>
               </Row>
             </Section>
-            <Section>
+            <Section className="px-[10px]">
               <Row className="mt-[15px]">
                 <Column
                   className="w-1/2 text-center h-[120px]"
@@ -271,8 +272,8 @@ const hotlineEmail = ({
                   }}
                 >
                   <Button
-                    href=""
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700]"
+                    href="#"
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700]"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -296,8 +297,8 @@ const hotlineEmail = ({
                   }}
                 >
                   <Button
-                    href=""
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700] inline-block"
+                    href="#"
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700] inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -323,8 +324,8 @@ const hotlineEmail = ({
                   }}
                 >
                   <Button
-                    href=""
-                    className="m-0 pl-[10px] pr-[10px] py-[8px] rounded-[16px] text-[12px] font-[700]"
+                    href="#"
+                    className="m-0 pl-[10px] pr-[10px] py-[8px] rounded-[16px] text-[10px] font-[700]"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -348,8 +349,8 @@ const hotlineEmail = ({
                   }}
                 >
                   <Button
-                    href=""
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700] inline-block"
+                    href="#"
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700] inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -375,8 +376,8 @@ const hotlineEmail = ({
                   }}
                 >
                   <Button
-                    href=""
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700]"
+                    href="#"
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700]"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -400,8 +401,8 @@ const hotlineEmail = ({
                   }}
                 >
                   <Button
-                    href=""
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700] inline-block"
+                    href="#"
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700] inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -427,8 +428,8 @@ const hotlineEmail = ({
                   }}
                 >
                   <Button
-                    href=""
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700]"
+                    href="#"
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700]"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -452,8 +453,8 @@ const hotlineEmail = ({
                   }}
                 >
                   <Button
-                    href=""
-                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[12px] font-[700] inline-block"
+                    href="#"
+                    className="m-0 px-[7px] py-[8px] rounded-[16px] text-[10px] font-[700] inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
