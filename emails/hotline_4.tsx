@@ -33,7 +33,7 @@ interface hotlineEmailProps {
 }
 
 const baseUrl = process.env.SITE_URL ? `https://${process.env.SITE_URL}` : "";
-const isRemoteImages = true;
+const isRemoteImages = false;
 
 const products_: Iproduct[] = [
   {
@@ -285,7 +285,7 @@ const hotlineEmail = ({
                     {products[0].name}
                   </Button>
                 </Column>
-                <Column>
+                <Column align="right">
                   <p className="max-h-0 relative opacity-[0.999]">
                     <Img
                       src={
@@ -300,7 +300,7 @@ const hotlineEmail = ({
                   </p>
                   <Button
                     href="#"
-                    className="mt-[30px] ml-[80px] pl-[10px] pr-[50px] py-[8px] rounded-[16px] text-[10px] font-[700] whitespace-nowrap inline-block"
+                    className="mt-[30px] mr-[70px] pl-[10px] pr-[50px] py-[8px] rounded-[16px] text-[10px] font-[700] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -339,7 +339,7 @@ const hotlineEmail = ({
                     {products[2].name}
                   </Button>
                 </Column>
-                <Column>
+                <Column align="right">
                   <p className="max-h-0 relative opacity-[0.999]">
                     <Img
                       src={
@@ -354,7 +354,7 @@ const hotlineEmail = ({
                   </p>
                   <Button
                     href="#"
-                    className="mt-[90px] ml-[40px] pl-[10px] pr-[50px] py-[8px] rounded-[16px] text-[10px] font-[700] whitespace-nowrap inline-block"
+                    className="mt-[90px] mr-[60px] pl-[10px] pr-[50px] py-[8px] rounded-[16px] text-[10px] font-[700] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -393,7 +393,7 @@ const hotlineEmail = ({
                     {products[4].name}
                   </Button>
                 </Column>
-                <Column>
+                <Column align="right">
                   <p className="max-h-0 relative opacity-[0.999]">
                     <Img
                       src={
@@ -408,7 +408,7 @@ const hotlineEmail = ({
                   </p>
                   <Button
                     href="#"
-                    className="mt-[60px] ml-[30px] pl-[10px] pr-[60px] py-[8px] rounded-[16px] text-[10px] font-[700] whitespace-nowrap inline-block"
+                    className="mt-[60px] mr-[70px] pl-[10px] pr-[60px] py-[8px] rounded-[16px] text-[10px] font-[700] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
@@ -447,7 +447,7 @@ const hotlineEmail = ({
                     {products[6].name}
                   </Button>
                 </Column>
-                <Column>
+                <Column align="right">
                   <p className="max-h-0 relative opacity-[0.999]">
                     <Img
                       src={
@@ -462,7 +462,7 @@ const hotlineEmail = ({
                   </p>
                   <Button
                     href="#"
-                    className="mt-[50px] ml-[90px] pl-[10px] pr-[40px] py-[8px] rounded-[16px] text-[10px] font-[700] whitespace-nowrap inline-block"
+                    className="mt-[50px] mr-[70px] pl-[10px] pr-[40px] py-[8px] rounded-[16px] text-[10px] font-[700] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
                       backgroundColor: "#F9E505",
