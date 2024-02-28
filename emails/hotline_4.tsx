@@ -609,19 +609,6 @@ const hotlineEmail = ({
                         className="inline-block mr-2"
                       />
                     </Link>
-                    <Link href="viber://chat?number=%2B380991296404">
-                      <Img
-                        src={
-                          isRemoteImages
-                            ? "https://drive.google.com/thumbnail?id=1mPHcKqVyhVo72ZUGgV_QohkP9aPKFmxP"
-                            : `${baseUrl}/static/viber.png`
-                        }
-                        width={16}
-                        height="auto"
-                        alt="Viber"
-                        className="inline-block mr-2"
-                      />
-                    </Link>
                     <Link href="https://t.me/kibernetikiforyou">
                       <Img
                         src={
