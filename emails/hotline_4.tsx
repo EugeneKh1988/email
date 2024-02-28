@@ -20,6 +20,7 @@ interface Iproduct {
   name: string;
   imgUrl: string;
   remoteUrl: string;
+  link?: string;
 }
 
 interface hotlineEmailProps {
@@ -33,7 +34,7 @@ interface hotlineEmailProps {
 }
 
 const baseUrl = process.env.SITE_URL ? `https://${process.env.SITE_URL}` : "";
-const isRemoteImages = false;
+const isRemoteImages = true;
 
 const products_: Iproduct[] = [
   {
@@ -41,48 +42,56 @@ const products_: Iproduct[] = [
     imgUrl: `${baseUrl}/static/Мультипечі.png`,
     remoteUrl:
       "https://drive.google.com/thumbnail?id=1mEm03nzd9gmYHE_b8VmZ-hlfVRSrb5oc",
+    link: "https://kibernetiki.com.ua/multypechi",
   },
   {
     name: "Грилі від 1499 грн",
     imgUrl: `${baseUrl}/static/Грилі.png`,
     remoteUrl:
       "https://drive.google.com/thumbnail?id=1mCCjlr6kTdBasKC_ZtLkGqK5Yg7HvAmr",
+    link: "https://kibernetiki.com.ua/gryli?utm_source=email&utm_medium=paid&utm_campaign=hotline",
   },
   {
     name: "Сендвічмейкери від 459 грн",
     imgUrl: `${baseUrl}/static/Сендвічмейкери.png`,
     remoteUrl:
       "https://drive.google.com/thumbnail?id=1lxVvcjlO3JGINZ6EshIFaFCae8Q4XStZ",
+    link: "https://kibernetiki.com.ua/buterbrodnyci?utm_source=email&utm_medium=paid&utm_campaign=hotline",
   },
   {
     name: "Електрочайники від 599 грн",
     imgUrl: `${baseUrl}/static/Електрочайники.png`,
     remoteUrl:
       "https://drive.google.com/thumbnail?id=1m1EgUXgg2QVCaTz-GEtIBRTULHRlAZfD",
+    link: "https://kibernetiki.com.ua/elektrochaynyky?utm_source=email&utm_medium=paid&utm_campaign=hotline",
   },
   {
     name: "Міксери стаціонарні від 1399 грн",
     imgUrl: `${baseUrl}/static/Міксери_стаціонарні.png`,
     remoteUrl:
       "https://drive.google.com/thumbnail?id=1lxdcM_cx0AVHgheOCjC2a3_jpVEtZtSy",
+    link: "https://kibernetiki.com.ua/miksery/typ-miksera=stacionarnyy?utm_source=email&utm_medium=paid&utm_campaign=hotline",
   },
   {
-    name: "Мультиварки від 1199 грн",
+    name: "Мультиварки від 1499 грн",
     imgUrl: `${baseUrl}/static/Мультиварки.png`,
     remoteUrl:
       "https://drive.google.com/thumbnail?id=1mIdAGDPnsKpcIcuC4vUfh0tnT5gggLra",
+    link: "https://kibernetiki.com.ua/multyvarky?utm_source=email&utm_medium=paid&utm_campaign=hotline",
   },
   {
     name: "Міксери ручні від 599 грн",
     imgUrl: `${baseUrl}/static/Міксери_ручні.png`,
     remoteUrl:
       "https://drive.google.com/thumbnail?id=1mAU5-eXHZvNIRh-vR9hoVwqfimaDA3gx",
+    link: "https://kibernetiki.com.ua/miksery/typ-miksera=ruchnyy?utm_source=email&utm_medium=paid&utm_campaign=hotline",
   },
   {
     name: "Блендери від 749 грн",
     imgUrl: `${baseUrl}/static/Блендери.png`,
     remoteUrl:
       "https://drive.google.com/thumbnail?id=1m1hTIA8w9AAQEQl_r5IevLBlBiKgP5Yw",
+    link: "https://kibernetiki.com.ua/blendery?utm_source=email&utm_medium=paid&utm_campaign=hotline",
   },
 ];
 
@@ -166,17 +175,19 @@ const hotlineEmail = ({
             >
               <Row>
                 <Column>
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? "https://drive.google.com/thumbnail?id=1m3-lHgR-0bvKVASc5-XxhOKQcme814VD"
-                        : `${baseUrl}/static/logo_1.png`
-                    }
-                    className="m-[10px]"
-                    width={170}
-                    height="auto"
-                    alt="Кібернетики.UA"
-                  />
+                  <Link href="https://kibernetiki.com.ua/?utm_source=email&utm_medium=paid&utm_campaign=hotline">
+                    <Img
+                      src={
+                        isRemoteImages
+                          ? "https://drive.google.com/thumbnail?id=1m3-lHgR-0bvKVASc5-XxhOKQcme814VD"
+                          : `${baseUrl}/static/logo_1.png`
+                      }
+                      className="m-[10px]"
+                      width={170}
+                      height="auto"
+                      alt="Кібернетики.UA"
+                    />
+                  </Link>
                 </Column>
                 <Column>
                   <Text
@@ -206,13 +217,25 @@ const hotlineEmail = ({
                     {cashback}
                   </Text>
                   <Text
-                    className="text-[16px] font-[700] mt-0 mb-[15px]"
+                    className="text-[22px] font-[700] mt-0 mb-[15px]"
                     style={{
                       color: "#2B2A29",
                       fontFamily: `Lato-Bold, ${fallBackFonts}`,
                     }}
                   >
-                    На всю дрібну побутову техніку за промокодом
+                    На всю{" "}
+                    <Link
+                      className="pb-[2px]"
+                      href="https://kibernetiki.com.ua/dribna-pobutova-tehnika?utm_source=email&utm_medium=paid&utm_campaign=hotline"
+                      style={{
+                        color: "#2B2A29",
+                        fontFamily: `Lato-Bold, ${fallBackFonts}`,
+                        borderBottom: "1px solid #2B2A29",
+                      }}
+                    >
+                      дрібну побутову техніку
+                    </Link>{" "}
+                    за промокодом
                   </Text>
                   <Text
                     className="mt-0 mb-[15px] px-[40px] py-[8px] leading-[16px] tracking-[0.2em] rounded-[8px] text-[14px] font-[700] inline-block"
@@ -224,6 +247,16 @@ const hotlineEmail = ({
                     }}
                   >
                     {promoCode}
+                  </Text>
+                  <Text
+                    className="text-[14px] mt-0 mb-[10px] font-[700]"
+                    style={{
+                      color: "#2B2A29",
+                      fontFamily: `Lato-Bold, ${fallBackFonts}`,
+                    }}
+                  >
+                    Унікальна пропозиція до 8 березня від Кібернетики тільки для
+                    зареєстрованих користувачів hotline.ua
                   </Text>
                   <Text
                     className="text-[12px] mt-0 mb-[5px]"
@@ -273,7 +306,7 @@ const hotlineEmail = ({
                     />
                   </p>
                   <Button
-                    href="#"
+                    href={products[0].link}
                     className="ml-[100px] pl-[30px] pr-[15px] py-[8px] rounded-[16px] text-[12px] font-[700] mb-[70px] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
@@ -299,7 +332,7 @@ const hotlineEmail = ({
                     />
                   </p>
                   <Button
-                    href="#"
+                    href={products[1].link}
                     className="mt-[30px] mr-[70px] pl-[15px] pr-[80px] py-[8px] rounded-[16px] text-[12px] font-[700] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
@@ -327,7 +360,7 @@ const hotlineEmail = ({
                     />
                   </p>
                   <Button
-                    href="#"
+                    href={products[2].link}
                     className="mt-[40px] ml-[100px] pl-[50px] pr-[15px] py-[8px] rounded-[16px] text-[12px] font-[700] mb-[70px] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
@@ -353,7 +386,7 @@ const hotlineEmail = ({
                     />
                   </p>
                   <Button
-                    href="#"
+                    href={products[3].link}
                     className="mt-[90px] mr-[60px] pl-[15px] pr-[60px] py-[8px] rounded-[16px] text-[12px] font-[700] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
@@ -381,7 +414,7 @@ const hotlineEmail = ({
                     />
                   </p>
                   <Button
-                    href="#"
+                    href={products[4].link}
                     className="ml-[100px] pl-[30px] pr-[15px] py-[8px] rounded-[16px] text-[12px] font-[700] mb-[70px] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
@@ -407,7 +440,7 @@ const hotlineEmail = ({
                     />
                   </p>
                   <Button
-                    href="#"
+                    href={products[5].link}
                     className="mt-[60px] mr-[70px] pl-[15px] pr-[70px] py-[8px] rounded-[16px] text-[12px] font-[700] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
@@ -435,7 +468,7 @@ const hotlineEmail = ({
                     />
                   </p>
                   <Button
-                    href="#"
+                    href={products[6].link}
                     className="ml-[70px] pl-[60px] pr-[15px] py-[8px] rounded-[16px] text-[12px] font-[700] mb-[70px] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
@@ -461,7 +494,7 @@ const hotlineEmail = ({
                     />
                   </p>
                   <Button
-                    href="#"
+                    href={products[7].link}
                     className="mt-[50px] mr-[70px] pl-[15px] pr-[50px] py-[8px] rounded-[16px] text-[12px] font-[700] whitespace-nowrap inline-block"
                     style={{
                       color: "#2B2A29",
@@ -486,8 +519,14 @@ const hotlineEmail = ({
                     * Під "КЕШБЕК 5%" мається на увазі нарахування бонусів у
                     розмірі 5 (п'яти) відсотків від вартості придбаного товару з
                     розділу сайту "Дрібна побутова техніка" на бонусний рахунок
-                    покупця згідно правил програми "КІБЕР-КЕШБЕК", з якими можна
-                    ознайомитись на сайті.
+                    покупця згідно правил програми{" "}
+                    <Link
+                      href="https://kibernetiki.com.ua/kiber-cashback"
+                      className="text-[8px]"
+                    >
+                      "КІБЕР-КЕШБЕК"
+                    </Link>
+                    , з якими можна ознайомитись на сайті.
                   </Text>
                 </Column>
               </Row>
@@ -495,25 +534,27 @@ const hotlineEmail = ({
             <Section className="mt-[15px]">
               <Row className="bg-[#404040]">
                 <Column className="w-1/3">
-                  <Img
-                    src={
-                      isRemoteImages
-                        ? "https://drive.google.com/thumbnail?id=1m3-lHgR-0bvKVASc5-XxhOKQcme814VD"
-                        : `${baseUrl}/static/logo_1.png`
-                    }
-                    width={160}
-                    height="auto"
-                    alt="Кібернетики.UA"
-                    className="px-[10px]"
-                    style={{
-                      borderRadius: "20px",
-                    }}
-                  />
+                  <Link href="https://kibernetiki.com.ua/?utm_source=email&utm_medium=paid&utm_campaign=hotline">
+                    <Img
+                      src={
+                        isRemoteImages
+                          ? "https://drive.google.com/thumbnail?id=1m3-lHgR-0bvKVASc5-XxhOKQcme814VD"
+                          : `${baseUrl}/static/logo_1.png`
+                      }
+                      width={160}
+                      height="auto"
+                      alt="Кібернетики.UA"
+                      className="px-[10px]"
+                      style={{
+                        borderRadius: "20px",
+                      }}
+                    />
+                  </Link>
                 </Column>
                 <Column align="center" className="w-1/3">
                   <p className="m-0">
                     <Link
-                      href="https://kibernetiki.com.ua"
+                      href="https://kibernetiki.com.ua/?utm_source=email&utm_medium=paid&utm_campaign=hotline"
                       className="text-[12px] text-white leading-4"
                       style={{
                         fontFamily: `Lato-Bold, ${fallBackFonts}`,
@@ -542,7 +583,7 @@ const hotlineEmail = ({
                     style={{ marginTop: "20px" }}
                     className="text-center max-w-[160px]"
                   >
-                    <Link href="https://www.instagram.com">
+                    <Link href="https://www.instagram.com/kibernetiki.com.ua/">
                       <Img
                         src={
                           isRemoteImages
@@ -555,7 +596,7 @@ const hotlineEmail = ({
                         className="inline-block mr-2"
                       />
                     </Link>
-                    <Link href="https://www.tiktok.com/ru-RU/">
+                    <Link href="https://www.tiktok.com/@kibernetiki_official">
                       <Img
                         src={
                           isRemoteImages
@@ -568,7 +609,7 @@ const hotlineEmail = ({
                         className="inline-block mr-2"
                       />
                     </Link>
-                    <Link href="https://www.viber.com/ru/">
+                    <Link href="viber://chat?number=%2B380991296404">
                       <Img
                         src={
                           isRemoteImages
@@ -581,7 +622,7 @@ const hotlineEmail = ({
                         className="inline-block mr-2"
                       />
                     </Link>
-                    <Link href="https://web.telegram.org/k/">
+                    <Link href="https://t.me/kibernetikiforyou">
                       <Img
                         src={
                           isRemoteImages
